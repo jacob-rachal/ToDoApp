@@ -1,0 +1,65 @@
+/* class array_display is fro shaping the div to give enough space for the things being displayed within it. */
+
+/* NAVBAR BEGIN */
+.navbar-default {
+  background: #000000;
+  /* border-color: #e7e7e7; */
+}
+.navbar {
+  border: 0;
+}
+/* Targeting the javascript navbar */
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+  /* Copied from the inspector */
+  color: #ffffff;
+  background: transparent;
+  /* note to self: the above is for the full finalized solution, while the below is for the part 1 solution. */
+  /* color: #555;
+    background-color: #e7e7e7; */
+}
+
+.navbar-brand h1 {
+  font-family: 'Permanent Marker', cursive;
+  margin:0;
+  font-size: 24px;
+  color: #ffffff;
+  /* color: #777; */
+}
+
+.navbar-brand {
+  padding:10px;
+}
+/* END NAVBAR */
+
+/* .menu-section {
+  padding-top:60px;
+  padding-bottom:60px;
+  } */
+
+/* .tab-pane {
+  padding-top: 60px;
+  padding-bottom: 60px;
+} */
+
+.td {
+  /* background-color: #0000aa; */
+}
+
+.alldone {
+  background-color: #aa0000;
+}
+
+
+/* Small Screens */
+@media only screen and (min-width : 768px) {
+}
+
+/* Medium Screens */
+@media only screen and (min-width : 992px) {
+}
+
+/* Large Screens */
+@media only screen and (min-width : 1200px) {
+}
