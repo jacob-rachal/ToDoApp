@@ -294,12 +294,7 @@ function myFunc() {
 //     console.log("The user failed to input an answer that could be properly read.");
 // };
 // Remember, check for edge cases with color.
-// .footer {
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 60px;
-// }
+
 
 // =================================================================
 // DAY 8 - forms
@@ -357,28 +352,65 @@ messageForm.addEventListener("submit", e => {
   let newMessage = document.createElement("li");
   //need to aslo add the buttons that do things. (checkmark, edit, delete)
   // newMessage.textContent = message;
-  newMessage.textContent.innerHTML += '<i class="fas fa-check"></i>';
+  let completedBtn = document.createElement("button");
+  let delete_me = document.createElement("button");
+  let edit_me = document.createElement("button");
+  //can actually add the event listeners here.
+
+  newMessage.textContent = message;
+  newMessage.className = "do_the_thing";
+  // this class will be responsible for font size, spacing, features, etc.
+  completedBtn.className = "completed_btn pull-right fas fa-check";
+  // have an event listener that adds a class to this thing's parent to strikethrough text.
+  delete_me.className = "unexistance_me_btn pull-right far fa-trash-alt";
+  edit_me.className = "refactor_btn pull-right far fa-edit";
+
+  //event listeners
+  completedBtn.addEventListener('click', e => {
+    newMessage.classList.add("yoink");
+  });
+  delete_me.addEventListener('click', e => {
+
+  });
+  edit_me.addEventListener('click', e => {
+    newMessage.textContent = prompt("re-enter what you want for this thing:");
+  })
+
   list.appendChild(newMessage);
+  newMessage.appendChild(completedBtn);
+  newMessage.appendChild(delete_me);
+  newMessage.appendChild(edit_me);
   messageForm.reset(); //clears out the message bar after you submit.
 
 }
 );
 
-function generateList() {
-  let fullList = [
-    'First',
-    'Second',
-    'Third',
-    'Fourth'
-  ];
-  let list = document.getElementById("list");
-  for (var i = 0; i < fullList.length; i++) {
-    let msg = document.createElement("li");
-    msg.textContent = fullList[i];
-    msg.id = `item-${i + 1}`;
-    list.appendChild(msg);
-  }
-};
+// NEED TO DO: find out how to event listen for the button presses, and how to access the parents of the buttons.
+// let checked_marked = document.querySelector('.completedBtn').parentElement;
+// checked_marked.addEventListener(
+//   'click',
+//   event => {
+//
+//
+// });
+
+
+
+// function generateList() {
+//   let fullList = [
+//     'First',
+//     'Second',
+//     'Third',
+//     'Fourth'
+//   ];
+//   let list = document.getElementById("list");
+//   for (var i = 0; i < fullList.length; i++) {
+//     let msg = document.createElement("li");
+//     msg.textContent = fullList[i];
+//     msg.id = `item-${i + 1}`;
+//     list.appendChild(msg);
+//   }
+// };
 
 // generateList(); //function call.
 
@@ -397,19 +429,19 @@ function generateList() {
 
 //"Healthy dose of anxiety"
 
-function aboutMe () {
-  let me ={
-    firstName: "Jacob",
-    lastName: "Rachal",
-    age: 27,
-    currentClass: "JavaScript",
-    fullName: function () {
-      return `${this.firstName} ${this.lastName}`
-    }
-  }//'${this.firstName} ${this.lastName}'
-  // console.log(this);
-  console.log(me.fullName());
-};
+// function aboutMe () {
+//   let me ={
+//     firstName: "Jacob",
+//     lastName: "Rachal",
+//     age: 27,
+//     currentClass: "JavaScript",
+//     fullName: function () {
+//       return `${this.firstName} ${this.lastName}`
+//     }
+//   }//'${this.firstName} ${this.lastName}'
+//   // console.log(this);
+//   console.log(me.fullName());
+// };
 
 // aboutMe();
 

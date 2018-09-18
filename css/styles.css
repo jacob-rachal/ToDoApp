@@ -50,7 +50,20 @@
 .alldone {
   background-color: #aa0000;
 }
+/* Classes for when new elements are made. */
+.do_the_thing {
+  /* text: 16; */
+}
+.completed_btn {}
+.unexistance_me_btn {}
+.refactor_btn {}
 
+
+/* classes that activate when buttons are pressed */
+.yoink {
+  text-decoration: line-through;
+  /* ??? tis right? */
+}
 
 /* Small Screens */
 @media only screen and (min-width : 768px) {
