@@ -48,15 +48,24 @@
 }
 
 .alldone {
-  background-color: #aa0000;
+  /* background-color: #aa0000; */
 }
 /* Classes for when new elements are made. */
 .do_the_thing {
-  /* text: 16; */
+  font-size: 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  /* color: white; */
 }
-.completed_btn {}
-.unexistance_me_btn {}
-.refactor_btn {}
+.completed_btn {
+  background-color: #0000f9;
+}
+.unexistance_me_btn {
+  background-color: #f90000;
+}
+.refactor_btn {
+  background-color: #00f900;
+}
 
 
 /* classes that activate when buttons are pressed */
