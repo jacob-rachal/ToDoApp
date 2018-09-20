@@ -42,20 +42,50 @@
   padding-top: 60px;
   padding-bottom: 60px;
 } */
+.space-below {
+  margin-bottom: 20px;
+}
+
+.akimbo {
+  background-image: url('../imgs/space-station-wallpaper.jpg');
+  background-attachment: fixed;
+  /* fixed to the window */
+  background-size: cover;
+  /* cover expands/shrinks image to cover the sixe of the container */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  /* vh= view height */
+  display: flex;
+  /* align-items: center; */
+}
 
 .td {
   /* background-color: #0000aa; */
+  /* font-color: #0000aa; */
+  margin-bottom: 20px;
 }
 
 .alldone {
   /* background-color: #aa0000; */
+  margin-bottom: 20px;
+
 }
 /* Classes for when new elements are made. */
 .do_the_thing {
   font-size: 20px;
+  text-align: center;
   text-decoration: none;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
   /* color: white; */
+  background-color: white;
+  border-radius:90%;
+  /* text-decoration-color: white; */
+
 }
 .completed_btn {
   background-color: #0000f9;

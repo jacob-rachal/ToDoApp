@@ -84,6 +84,28 @@ newDiv.classList.add("text-center");
 //very very very basic example of how you can generate a webpage using (almost) only JavaScript. Useful for todo checklist app finale.
 //lookup "Javascript 30" for daily javascript exercises.
 
+// clock
+function checkTime (i) {
+  if (i < 10){i= "0" +i};
+  return i;
+}; // makes our clock more normal-looking.
+
+function displayClock(){
+  const clock = document.getElementById("clock");
+
+  setInterval(function () {
+    var today = new Date();
+    var hour = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    min = checkTime(min);
+    sec = checkTime(sec);
+    clock.textContent = `${hour}:${min}:${sec}`;
+  }, 1000);//callback function.
+};
+displayClock();
+
+
 // =================================================================
 // DAY 12 - FiNALE.
 //writting an event listener. HANG ONTO THIS.
@@ -103,6 +125,9 @@ messageForm.addEventListener("submit", e => {
   let delete_me = document.createElement("button");
   let edit_me = document.createElement("button");
   //can actually add the event listeners here.
+  if(message=== ""){alert("HEY! You need to actually enter something!");
+      alert("*sigh* Just go ahead and edit your content in.");
+  };
 
   newMessage.textContent = message;
   newMessage.className = "do_the_thing";

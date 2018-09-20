@@ -22,6 +22,7 @@
   <div class="container-fluid" id="formy">
     <!-- Need to style this up more. -->
     <h1 class="text-center">JACOB'S TO-DO APP</h1>
+    <h2 class="text-center" id="clock"></h2>
     <!-- <ul id="list"></ul> -->
     <form method="post" name="messageForm" action="index.html">
       <!-- method: post(sending info/data), get(getting information/data from DB), delete(remove data), patch(update data) -->
@@ -31,12 +32,11 @@
         <!-- value="msg" -->
       </div>
       <!-- <button class="btn btn-primary">Send</button>--><!--button.btn.btn-primary -->
-      <input type="submit" class="btn btn-primary" value="Send">
+      <div class="text-center space-below">
+        <input type="submit" class="btn btn-primary" value="Send">
+      </div>
 
-      <!-- Doing things the BAD way, just ot know what not to do. -->
-      <!-- <button onclick="submitForm()">send</button> -->
-      <!-- With onclick, can fill in with JS via the inspector console to do THINGS. -->
-      <!-- SO NEVER USE ONCLICK, always use event listeners -->
+
     </form>
   </div>
 
@@ -46,79 +46,29 @@
   <!-- OR (and this feels kinda advanced) have the same side-by-side style but each column takes up the entireity of the screen width; switching between todo and Completed via swiping left-right-etc. -->
   <!-- BETTER PLAN!! => when in mobile form, place main columns into tabed sections or nevermind they start off in tabs let's do this. -->
 
-  <!-- <section id="menu-section" class="menu-section"> -->
-        <!-- yoinked this section from my portfolio, which I got from Chef's Table project.. -->
-        <!-- <div class="container">
-          <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-              <h2>Tabbed lists</h2>
 
-              <div>
-                  <ul class="nav nav-tabs" role="tablist">
-                      <li role="presentation"><a href="#info" aria-controls="home" role="tab" data-toggle="tab"><h3>INFO</h3></a></li>
-                      <li role="presentation" class="active"><a href="#todo" aria-controls="profile" role="tab" data-toggle="tab"><h3>To Do</h3></a></li>
-                      <li role="presentation"><a href="#completed" aria-controls="messages" role="tab" data-toggle="tab"><h3>Completed</h3></a></li>
-                  </ul>
-
-                  <div class="tab-content">
-                      <div role="tabpanel" class="tab-pane fade" id="info">
-                          <div class="row">
-                                <div class="col-md-8 col-md-offset-2">
-                                  <h2>How to use this app</h2>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aliquid commodi temporibus unde officiis non harum ipsam. Unde, impedit minus.</p>
-
-                                </div>
-                          </div>
-                      </div>
-                      <div role="tabpanel" class="tab-pane active fade in" id="todo">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 array_display">
-                              <ul class="things_to_do" id="todoList">
-
-                              </ul>
-                            </div>
-
-                        </div>
-                      </div>
-                      <div role="tabpanel" class="tab-pane fade" id="completed">
-                          <div class="row">
-                            <div class="col-md-8 col-md-offset-2 array_display">
-                              <ul class="completed_things" id="completedList">
-                                <li>
-                                  <h1>HEEEEELLLP!</h1>
-
-                                </li>
-                              </ul>
-                            </div>
-
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- END of MENU SECTION -->
 <!-- right now, the tabs aren't working, so sticking with basics since THEY WORK. -->
 <!-- ============================================================ -->
   <div class="container-fluid">
     <div class="akimbo row">
       <div class="col-md-5 col-md-offset-1 td">
-        <h2 class="column-header text-center">TO DO'S</h2>
+        <h2 class="column-header text-center"><font color="#aa0000">TO DO'S</font></h2>
         <!-- Now need an unpopulated ul -->
         <ul id="todoList"></ul>
         <!-- <ul id="list"></ul> -->
       </div>
       <div class="col-md-5 alldone">
-        <h2 class="column-header text-center">COMPLETED</h2>
+        <h2 class="column-header text-center"><font color="#0000aa">COMPLETED</font></h2>
         <!-- Now need an unpopulated ul -->
         <ul id="completedList"></ul>
       </div>
 
     </div>
   </div>
+
+  <section class="footer">
+      <!-- <h2 class="text-center" id="clock"></h2> -->
+  </section>
 
   <script src="js/scripts.js"></script>
 </body>
